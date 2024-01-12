@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Portfolio | D'vine By Design</title>
+    <link rel="icon" href="logo-simple-1.png">
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/de9455874d.js" crossorigin="anonymous"></script>
+</head>
+<body> 
+    <header>
+        <div class="header-nav">
+            <div class="header-link">
+                <a href="about.html">About</a>
+            </div>
+            <div class="header-link">
+                <a href="portfolio.html">Portfolio</a>
+            </div>
+            
+
+        </div>
+        <div class="logo-container">
+            <a href="index.html">
+            <img src="logo-simple-1.png" alt="">
+        </a>
+            <!-- <h1>D'vine By Design</h1> -->
+        </div>
+        <div class="header-nav">
+            <div class="header-link">
+                <a href="services.html">Services</a>
+            </div>
+            <div class="header-link">
+                <a href="contact.html">Contact</a>
+            </div>
+            
+
+        </div>
+    </header>
+    
+    <main>
+        <h1>A <i>Glimpse</i> of our Past <i>Events</i></h1>
+        <div class="button-section">
+            
+            <div class="buttondiv">
+                <button id="social" class="selected">Social</button>
+                <button id="corporate">Corporate</button>
+            </div>
+        </div>
+
+        <div id="wrapper-social" class="subsequent display">
+            <div class="display-wrapper wrapper-social">
+                <div class="img-container img-c-1">
+                    <img src="wedding5.jpg" alt="">
+                </div>
+                <div class="img-container img-c-2">
+                    <img src="wedding1.jpg" alt="">
+                </div>
+                <div class="img-container img-c-3">
+                    <img src="wedding6.jpg" alt="">
+                </div>
+                <div class="img-container img-c-4">
+                    <img src="wedding7.jpg" alt="">
+                </div>
+                <div class="img-container img-c-5">
+                    <img src="wedding2.jpg" alt="">
+                </div>
+                <div class="img-container img-c-6">
+                    <img src="wedding3.jpg" alt="">
+                </div>
+                <div class="img-container img-c-7">
+                    <img src="party1.jpg" alt="">
+                </div>
+                <div class="img-container img-c-8">
+                    <img src="wedding4.jpg" alt="">
+                </div>
+                <div class="img-container img-c-9">
+                    <img src="party2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div id="wrapper-corporate" class="subsequent display">
+            <div class="display-wrapper wrapper-social">
+                <div class="img-container img-c-1">
+                    <img src="corporate1.jpg" alt="">
+                </div>
+                <div class="img-container img-c-2">
+                    <img src="conference3.jpg" alt="">
+                </div>
+                <div class="img-container img-c-3">
+                    <img src="conference4.jpg" alt="">
+                </div>
+                <div class="img-container img-c-4">
+                    <img src="conference5.jpg" alt="">
+                </div>
+                <div class="img-container img-c-5">
+                    <img src="conference6.jpg" alt="">
+                </div>
+                <div class="img-container img-c-6">
+                    <img src="convention1.jpg" alt="">
+                </div>
+                <div class="img-container img-c-7">
+                    <img src="convention2.jpg" alt="">
+                </div>
+                <div class="img-container img-c-8">
+                    <img src="tradeshow1.jpg" alt="">
+                </div>
+                <div class="img-container img-c-9">
+                    <img src="tradeshow2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <img src="vertical-logo.png" alt="">
+        </div>
+        <div class="footer-right">
+            <div class="links-top">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="attributions.html">Attributions</a>
+
+            </div>
+            <div class="links-bottom">
+                <div class="instagram-link">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <a href="#">Instagram</a>
+                </div>
+                <div class="email-link">
+                    <i class="fa-regular fa-envelope"></i>
+                    <a href="#">Email</a>
+                </div>
+                <div class="phone-link">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="#">Phone</a>
+                </div>
+            </div>
+            <p style="display: flex; align-items: center;" class="copyright">&copy; 2024 D'vine By Design. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        let divs = document.querySelectorAll('.subsequent');
+
+        let state = 0;
+        let buttons = document.querySelectorAll('button');
+
+        divs.forEach((d, j) => {
+                    if (j == state) {
+                        
+                        d.style.display = 'flex';
+                    } else {
+                        d.style.display = 'none';
+                    }
+                })
+
+        buttons.forEach((b, i) => {
+            b.addEventListener('click', () => {
+                state = i;
+                buttons[-i + 1].className = '';
+                b.className = 'selected'
+                divs.forEach((d, j) => {
+                    if (j == state) {
+                        
+                        d.style.display = 'flex';
+                    } else {
+                        d.style.display = 'none';
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

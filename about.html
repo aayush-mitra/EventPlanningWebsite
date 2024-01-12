@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>About | D'vine By Design</title>
+    <link rel="icon" href="logo-simple-1.png">
+    <link rel="stylesheet" href="about.css">
+    <script src="https://kit.fontawesome.com/de9455874d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="upper">
+        <div class="top-header-image-container">
+            <div class="image-container">
+                <img class="top-header-bg" src="wedding1.jpg" alt="">
+            </div>
+            <div class="img-hue"> 
+                <h1>About Us</h1>
+            </div>
+            <header>
+                <div class="header-nav">
+                    <div class="header-link">
+                        <a href="about.html">About</a>
+                    </div>
+                    <div class="header-link">
+                        <a href="portfolio.html">Portfolio</a>
+                    </div>
+                    
+    
+                </div>
+                <div class="logo-container">
+                    <a href="index.html">
+                    <img src="logo-simple-1.png" alt="">
+                </a>
+                    <!-- <h1>D'vine By Design</h1> -->
+                </div>
+                <div class="header-nav">
+                    <div class="header-link">
+                        <a href="services.html">Services</a>
+                    </div>
+                    <div class="header-link">
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    
+    
+                </div>
+            </header>
+            <div class="big-logo">
+                <img src="logo-wide.png" alt="">
+            </div>
+        </div>
+        <div class="bottom-about-description">
+           <h1 class="bottom-about-header">
+            A <i>modern</i> and <i>adaptive</i> approach to <i>planning</i>.
+           </h1>
+           <h3 class="bottom-about-subheader">We're known for our unwavering commitment to crafting unforgettable
+            experiences, specializing in full-time event coordination. 
+           </h3>
+           <br>
+           <h4>With a dedicated team of professionals,
+            we go beyond the conventional to meticulously curate every detail, transforming visions into reality.</h4>
+           <div class="history">
+                <div class="history-left">
+                    <p>
+                        Founded by <i>Sarah Vine</i>, our venture has flourished with a dedicated team committed to delivering the utmost quality services to our clients. <br><br>Rooted in the vibrant city of <i>Orlando, Florida</i>, renowned as the top destination for corporate events and conferences, we extend our expertise beyond geographical boundaries. <br><br>Recognizing the demand for meticulous planning, we offer full-time services for destination weddings and conferences, ensuring that our clients' unique needs and preferences are met with excellence, regardless of location.<br><br> Our commitment to excellence and adaptability positions us as a dynamic force in the event planning industry, dedicated to creating unforgettable experiences for our clients, no matter where their special occasions unfold.
+
+                    </p>
+                </div>
+                <div class="history-right">
+                    <img src="corporate2.avif" alt="">
+                </div>
+           </div>
+        </div>
+
+        
+    </div>
+    <!-- Hiring -->
+    <div class="hiring">
+        <div class="hiring-form">
+            <form action="">
+                <div class="positions">
+                    <button class="">Business Manager</button>
+                    <button class="">Accountant</button>
+                    <button class="">Event Planner Corporate</button>
+                    <button class="">Event Planner Social</button>
+                    <button class="">Event Planner Assistant</button>
+                    <button class="">Part-time Internship</button>
+                </div>
+
+                <div class="name-wrapper">
+                    <input placeholder="First Name" type="text" id="first-name">
+                    <input placeholder="Last Name" type="text" id="last-name">
+                </div>
+                <div class="email">
+                    <input placeholder="Email" type="email" name="" id="email">
+                </div>
+                <div class="other">
+                    <input placeholder="Phone Number" type="tel" name="" id="phone">
+                    <input placeholder="Years of Experience" type="number" default="0" id="years-experience">
+                </div>
+                <div class="comments">
+                    <textarea placeholder="Reference/Comments/Questions" id="" cols="30" rows="10"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="hiring-right">
+            <h3>Join our team!</h3>
+            <img src="shirt.png" alt="">
+        </div>
+    </div>
+        <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <img src="vertical-logo.png" alt="">
+        </div>
+        <div class="footer-right">
+            <div class="links-top">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="attributions.html">Attributions</a>
+
+            </div>
+            <div class="links-bottom">
+                <div class="instagram-link">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <a href="#">Instagram</a>
+                </div>
+                <div class="email-link">
+                    <i class="fa-regular fa-envelope"></i>
+                    <a href="#">Email</a>
+                </div>
+                <div class="phone-link">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="#">Phone</a>
+                </div>
+            </div>
+            <p style="display: flex; align-items: center;" class="copyright">&copy; 2024 D'vine By Design. All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+
+<script>
+    let buttons = document.querySelectorAll("button");
+
+    buttons.forEach(x => {
+        x.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+        })
+    })
+
+    let positionButtons = document.querySelectorAll('.positions button')
+    let selected = null;
+    positionButtons.forEach((x, i) => {
+        x.addEventListener('click', (e) => {
+            
+
+            if (selected !== i) {
+                selected = i;
+            } else {
+                selected = null;
+            }
+
+            positionButtons.forEach((b, j) => {
+                if(j == selected) {
+                    b.className = 'selected'
+                } else {
+                    b.className = ''
+                }
+            })
+        })
+    })
+</script>
+</html>
